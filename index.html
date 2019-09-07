@@ -7,34 +7,32 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="container">
+      
+      <header class="main-header">
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Информация</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Фото и видео</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Карта штата</a>
+              </li>
+              <li class="navigation__item">
+                <a href="catalog.html" class="navigation__link">Гостиницы</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="main-header__logo">
+            <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
+          </p>
+      </header>
 
-    <header class="main-header">
-      <div class="container">
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Информация</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Фото и видео</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Карта штата</a>
-            </li>
-            <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">Гостиницы</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="main-header__logo">
-          <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
-        </p>
-      </div>
-    </header>
-
-    <main class="content">
-      <h1 class="visually-hidden">Sedona</h1>
-      <div class="container">
+      <main class="content">
+        <h1 class="visually-hidden">Sedona</h1>
         <p class="content__img"><img src="https://via.placeholder.com/150x100" alt="Картинка. Добро пожаловать в великолепную Седону, потому-что Гранд каньон отстой."></p>
         <section class="features">
           <h3 class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
@@ -46,43 +44,38 @@
         <section class="search">
           <h3 class="search__title">Заинтересовались?</h3>
           <p class="search__text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="btn search__btn">Поиск готиницы в Седоне</button>
+          <a class="btn search__btn">Поиск готиницы в Седоне</a>
             <!-- Форма и карта -->
             <form action="" class="search__form search-form">
 
             </form>
         </section>
-      </div>
-    </main>
+      </main>
 
-    <footer class="main-footer main-footer--transparent-on">
-        <div class="container">
-          <div class="flex-container">
-            <section class="visit-us">
-              <a class="visit-us__link" href="">#Visitsedona</a>
-            </section>
-            <section class="social">
-              <ul class="social__buttons">
-                <li class="btn social__button social__button--tw">
-                  <a href="https://twitter.com">Twitter</a>
-                </li>
-                <li class="btn social__button social__button--fb">
-                  <a href="https://facebook.com">Facebook</a>
-                </li>
-                <li class="btn social__button social__button--yt">
-                  <a href="https://youtube.com">Youtube</a>
-                </li>
-              </ul>
-            </section>
-            <section class="designed-by">
-              <p class="designed-by__title">Website by</p>
-              <a class="designed-by__link" href="#" >
-                <img src="https://via.placeholder.com/150x100" alt="Лого HTML Academy">
-              </a>
-            </section>
-          </div>
+      <footer class="main-footer main-footer--transparent-on">
+        <div class="visit">
+            <a class="visit__link" href="">#Visitsedona</a>
+        </div>
+        <div class="social">
+            <ul class="social__links">
+            <li class="social__link social__link--tw">
+                <a href="https://twitter.com">Twitter</a>
+            </li>
+            <li class="social__link social__link--fb">
+                <a href="https://facebook.com">Facebook</a>
+            </li>
+            <li class="social__link social__link--yt">
+                <a href="https://youtube.com">Youtube</a>
+            </li>
+            </ul>
+        </div>
+        <div class="designed-by">
+            <p class="designed-by__title">Website by</p>
+            <a class="designed-by__link" href="#" >
+            <img src="https://via.placeholder.com/150x100" alt="Лого HTML Academy">
+            </a>
         </div>
       </footer>
-      
+    </div>   
   </body>
 </html>
