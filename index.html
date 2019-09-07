@@ -8,7 +8,7 @@
   	</head>
 <body>
     <div class="container">
-
+		<!-- Навигация -->
 		<header class="main-header">
 			<nav class="navigation">
 				<ul class="navigation__list">
@@ -26,32 +26,98 @@
 					</li>
 				</ul>
 			</nav>
-			<p class="main-header__logo">
-				<img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
-			</p>
+			<a class="main-header__logo>
+                <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
+            </a>
 		</header>
 
 		<main class="content">
 			<h1 class="visually-hidden">Sedona</h1>
 			<p class="content__img"><img src="https://via.placeholder.com/150x100" alt="Картинка. Добро пожаловать в великолепную Седону, потому-что Гранд каньон отстой."></p>
+			<!-- Приемущества -->
 			<section class="features">
 				<h3 class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
 				<p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 				<div class="features__items">
-				<!-- Секция для приемуществ -->
+					<section class="features__item item-features">
+						<h3 class="item-features__title item-features__title--color-white">Настойщий городок</h3>
+						<p class="item-features__number item-features__number--color-white">&ndash; &#8470;1 &ndash;</p>
+						<p class="item-features__text item-features__text--color-white">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+					</section>
+					<section class="features__item item-features">
+						<img src="" alt="" class="item-features__photo">
+					</section>
+					<section class="features__item item-features">
+						<img src="" alt="" class="item-features__icon item-features__icon--house">
+						<h3 class="item-features__title item-features__title--color-black">Жильё</h3>
+						<p class="item-features__text item-features__text--color-black">Рекомендуем пожить в 			настоящем мотеле, всё как в кино!</p>
+					</section>
+					<section class="features__item item-features">
+						<img src="" alt="" class="item-features__icon item-features__icon--burger">
+						<h3 class="item-features__title item-features__title--color-black">Еда</h3>
+						<p class="item-features__text item-features__text--color-black">Всегда заказывайте 			фирменный бургер, вы не разочаруетесь!</p>
+					</section>
+					<section class="features__item item-features">
+						<img src="" alt="" class="item-features__icon item-features__icon--gift">
+						<h3 class="item-features__title item-features__title--color-black">Сувениры</h3>
+						<p class="item-features__text item-features__text--color-black">Не только китайского, но и 	местного производства!</p>
+					</section>
+					<section class="features__item item-features">
+						<img src="" alt="" class="item-features__photo">
+					</section>
+					<section class="features__item item-features">
+						<h3 class="item-features__title item-features__title--color-white">Там есть мост дьявола</h3>
+						<p class="item-features__number item-features__number--color-white">&ndash; &#8470;2 &ndash;</p>
+						<p class="item-features__text item-features__text--color-white">Да, по нему можно пройти! 	Если конечно вы осмелитесь</p>
+					</section>
+					<section class="features__item item-features">
+						<h3 class="item-features__title item-features__title--color-black">Небольшая площадь</h3>
+						<p class="item-features__number item-features__number--color-black">&ndash; &#8470;3 &ndash;</p>
+						<p class="item-features__text item-features__text--color-black">Всё достопримечательности находятся очень близко</p>	
+					</section>
+					<section class="features__item item-features">
+						<h3 class="item-features__title item-features__title--color-black">Красивая дорога</h3>
+						<p class="item-features__number item-features__number--color-black">&ndash; &#8470;4 &ndash;</p>
+						<p class="item-features__text item-features__text--color-black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>	
+					</section>
+					<section class="features__item item-features">
+						<h3 class="item-features__title item-features__title--color-black">Мало туристов</h3>
+						<p class="item-features__number item-features__number--color-black">&ndash; &#8470;5 &ndash;</p>
+						<p class="item-features__text item-features__text--color-black">Большиноство едет в Гранд Каньон и толпится там</p>	
+					</section>
 				</div> 
 			</section>
 			<section class="search">
 				<h3 class="search__title">Заинтересовались?</h3>
 				<p class="search__text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<a class="btn search__btn">Поиск гостиницы в Седоне</a>
-				<!-- Форма и карта -->
-				<form action="" class="search__form search-form">
-
+				<!-- Форма -->
+				<form action="" class="search__form form-search">
+					<p class="form-search__date-of-arrival">
+						<label for="Date">Дата заезда:</label>
+						<input type="date" name="Date" id="Date">
+					</p>
+					<p class="form-search__date-of-departure">
+						<label for="Time">Дата выезда:</label>
+						<input type="date" name="Time" id="Time">
+					</p>
+					<p class="form-search__amount-of-adults">
+						<label for="Adults">Взрослые:</label>
+						<input type="text" name="Adults" id="Adults">
+					</p>
+					<p class="form-search__amount-of-children">
+						<label for="Children">Дети:</label>
+						<input type="text" name="Children" id="Children">
+					</p>
+					<button class="btn form-search__btn">Найти</button>
 				</form>
+				<!-- Карта -->
+				<div class="search__map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703822.5050688398!2d-111.74090071952061!3d34.973707790422225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1567879063403!5m2!1sru!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
 			</section>
 		</main>
-
+		<!-- Подвал -->
 		<footer class="main-footer main-footer--transparent-on">
 			<div class="visit">
 				<a class="visit__link" href="">#Visitsedona</a>

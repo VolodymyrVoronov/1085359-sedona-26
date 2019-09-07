@@ -8,7 +8,7 @@
     </head>
 <body>
     <div class="container">
-
+        <!-- Навигация -->
         <header class="main-header">
             <nav class="navigation">
                 <ul class="navigation__list">
@@ -26,20 +26,82 @@
                     </li>
                 </ul>
             </nav>
-            <p class="main-header__logo main-header__logo--link">
-                <a href="index.html">
-                    <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
-                </a>
-            </p>
+            <a class="main-header__logo main-header__logo--link" href="index.html">
+                <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Седоны.">
+            </a>
         </header>
 
         <div class="filter">
         <h1 class="visually-hidden">Сортировка отелей по разным критериям</h1>
             <!-- Место для формы-фильтра -->
-            <form action="" class="filter__form">
-
+            <form action="" class="filter__form form-filter">
+                <ul class="form-filter__items">
+                    <li class="form-filter__item">
+                        <p class="form-filter__title">Инфраструктура:</p>
+                        <p class="form-filter__option">  
+                            <input type="checkbox" name="Pool" id="Pool">
+                            <label for="Pool">Бассейн</label>
+                        </p>
+                        <p class="form-filter__option">
+                            <input type="checkbox" name="Parking" id="Parking">
+                            <label for="Parking">Парковка</label>
+                        </p>
+                        <p class="form-filter__option">
+                            <input type="checkbox" name="wifi" id="wifi">
+                            <label for="wifi">Wi-Fi</label>
+                        </p>
+                    </li>
+                    <li class="form-filter__item">
+                        <p class="form-filter__title">Тип жилья:</p>
+                        <p class="form-filter__option">
+                            <input type="checkbox" name="Hotel" id="Hotel">
+                            <label for="Hotel">Гостница</label>
+                        </p>
+                        <p class="form-filter__option">
+                            <input type="checkbox" name="Motel" id="Motel">
+                            <label for="Motel">Мотель</label>
+                        </p>
+                        <p class="form-filter__option">
+                            <input type="checkbox" name="Apartment" id="Apartment">
+                            <label for="Apartment">Апартаменты</label>
+                        </p>
+                    </li>
+                    <li class="form-filter__item">
+                        <p class="form-filter__title">Стоимость в сутки (P):</p>
+                        <div class="form-fitler__prices">
+                            <input type="text" class="form-filter__price form-filter__price--left">
+                            <input type="text" class="form-filter__price form-filter__price--right">
+                        </div>
+                        <div class="form-filter__toggles">
+                            <i class="form-filter__toggle form-filter__toggle--left"></i>
+                            <i class="form-filter__toggle form__filter__toggle--right"></i>
+                        </div>
+                        <button class="btn form-filter__btn">Показать</button>
+                    </li>
+                </ul>
+                <div class="form-filter__sort">
+                    <h3>Найдено: <span>3</span></h3>
+                    <p>Сортировка:</p>
+                    <ul class="form-filter__selects">
+                        <li class="form-filter__select">
+                            <a href="">По цене</a>
+                        </li>
+                        <li class="form-filter__select">
+                            <a href="">По типу</a>
+                        </li>
+                        <li class="form-filter__select">
+                            <a href="">По рейтингу</a>
+                        </li>
+                    </ul>
+                    <div class="form-filter__arrows">
+                        <a href="" class="form-filter__arrow form-filter__arrow--up"></a>
+                        <a href="" class="form-filter__arrow form-filter__arrow--down"></a>
+                    </div>
+                </div>
             </form>
+            <!-- Результаты поиска -->
             <div class="filter__results">
+                <h1 class="visually-hidden">Результаты поиска</h1>
                 <article class="filter__result filter-result">
                     <img class="filter-result__photo" src="https://via.placeholder.com/150x100" alt="Гостиница Amarta Resort & Spa">
                     <div class="filter-result__info result-info">
@@ -96,7 +158,7 @@
                 </article>
             </div>
         </div>
-
+        <!-- Подвал -->
         <footer class="main-footer main-footer--transparent-on">
             <div class="visit">
                 <a class="visit__link" href="">#Visitsedona</a>
