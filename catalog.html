@@ -61,7 +61,7 @@
                             <input type="checkbox" name="motel" id="motel">
                             <label for="motel">Мотель</label>
                         </p>
-                        <p class=filter-formr__option">
+                        <p class="filter-form__option">
                             <input type="checkbox" name="apartment" id="apartment">
                             <label for="apartment">Апартаменты</label>
                         </p>
@@ -76,90 +76,94 @@
                             <i class="filter-form__toggle filter-form__toggle--left"></i>
                             <i class="filter-form__toggle ffilter-form__toggle--right"></i>
                         </div>
-                        <button class="btn filter-form__btn">Показать</button>
+                        <button class="btn filter-form__btn" type="submit">Показать</button>
                     </li>
                 </ul>
-                <div class="filter-form__sort">
-                    <h3>Найдено: <span>3</span></h3>
-                    <p>Сортировка:</p>
-                    <ul class="filter-form__selects">
-                        <li class="filter-form__select">
-                            <a href="">По цене</a>
-                        </li>
-                        <li class="filter-form__select">
-                            <a href="">По типу</a>
-                        </li>
-                        <li class="filter-form__select">
-                            <a href="">По рейтингу</a>
-                        </li>
-                    </ul>
-                    <div class="filter-form__arrows">
-                        <a href="" class="filter-form__arrow filter-form__arrow--up"></a>
-                        <a href="" class="filter-form__arrow filter-form__arrow--down"></a>
-                    </div>
-                </div>
             </form>
-            <!-- Результаты поиска -->
-            <div class="filter__results">
-                <h1 class="visually-hidden">Результаты поиска</h1>
-                <article class="filter__result filter-result">
-                    <img class="filter-result__photo" src="https://via.placeholder.com/150x100" alt="Гостиница Amarta Resort & Spa">
-                    <div class="filter-result__info result-info">
-                        <h4 class="result-info__name-of-housing">Amarta Resort & Spa</h4>
-                        <p class="result-info__type-of-housing">Гостиница</p>
-                        <p class="result-info__price">от 4000 Р.</p>
-                        <a href="#" class="btn result-info__btn-more">Подробнее</a>
-                        <a href="#" class="btn result-info__btn-booking">Забронировать</a>
-                    </div>
-                    <div class="filter-result__rank result-rank">
-                        <p class="result-rank__number-of-stars">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                        </p>
-                        <p class="result-rank__rating">Рейтинг: 8,5</p>
-                    </div>        
-                </article>
-                <article class="filter__result filter-result">
-                    <img class="filter-result__photo" src="https://via.placeholder.com/150x100" alt="Мотель Desert Quail Inn">
-                    <div class="filter-result__info result-info">
-                        <h4 class="result-info__name-of-housing">Desert Quail Inn</h4>
-                        <p class="result-info__type-of-housing">Мотель</p>
-                        <p class="result-info__price">от 3000 Р.</p>
-                        <a href="#" class="btn result-info__btn-more">Подробнее</a>
-                        <a href="#" class="btn result-info__btn-booking">Забронировать</a>
-                    </div>
-                    <div class="filter-result__rank result-rank">
-                        <p class="result-rank__number-of-stars">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                        </p>
-                        <p class="result-rank__rating">Рейтинг: 8,9</p>
-                    </div>        
-                </article>
-                <article class="filter__result filter-result">
-                    <img class="filter-result__photo" src="https://via.placeholder.com/150x100" alt="Апартаменты Villas At Poco Diablo">
-                    <div class="filter-result__info result-info">
-                        <h4 class="result-info__name-of-housing">Villas At Poco Diablo</h4>
-                        <p class="result-info__type-of-housing">Апартаменты</p>
-                        <p class="result-info__price">от 2000 Р.</p>
-                        <a href="#" class="btn result-info__btn-more">Подробнее</a>
-                        <a href="#" class="btn result-info__btn-booking">Забронировать</a>
-                    </div>
-                    <div class="filter-result__rank result-rank">
-                        <p class="result-rank__number-of-stars">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                        </p>
-                        <p class="result-rank__rating">Рейтинг: 9,2</p>
-                    </div>        
-                </article>
-            </div>
         </div>
+
+        <!-- Сортировка отелей -->
+        <div class="sort">
+            <h3>Найдено: <span>3</span></h3>
+            <p>Сортировка:</p>
+            <ul class="sort__selects">
+                <li class="sort__select">
+                    <a href="#">По цене</a>
+                </li>
+                <li class="sort__select">
+                    <a href="#">По типу</a>
+                </li>
+                <li class="sort__select">
+                    <a href="#">По рейтингу</a>
+                </li>
+            </ul>
+            <ul class="sort__arrows">
+                <li href="#" class="sort__arrow sort__arrow--up"></li>
+                <li href="#" class="sort__arrow sort__arrow--down"></li>
+            </ul>
+        </div>
+
+        <!-- Результаты поиска и сортировки отелей -->
+        <div class="results">
+            <h1 class="visually-hidden">Результаты поиска и сортировки отелей</h1>
+            <article class="result">
+                <img class="result__photo" src="https://via.placeholder.com/150x100" alt="Гостиница Amarta Resort & Spa">
+                <div class="result__info result-info">
+                    <h4 class="result-info__name-of-housing">Amarta Resort & Spa</h4>
+                    <p class="result-info__type-of-housing">Гостиница</p>
+                    <p class="result-info__price">от 4000 Р.</p>
+                    <a href="#" class="btn result-info__btn-more">Подробнее</a>
+                    <a href="#" class="btn result-info__btn-booking">Забронировать</a>
+                </div>
+                <div class="result__rank result-rank">
+                    <p class="result-rank__number-of-stars">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </p>
+                    <p class="result-rank__rating">Рейтинг: 8,5</p>
+                </div>        
+            </article>
+            <article class="result">
+                <img class="result__photo" src="https://via.placeholder.com/150x100" alt="Мотель Desert Quail Inn">
+                <div class="result__info result-info">
+                    <h4 class="result-info__name-of-housing">Desert Quail Inn</h4>
+                    <p class="result-info__type-of-housing">Мотель</p>
+                    <p class="result-info__price">от 3000 Р.</p>
+                    <a href="#" class="btn result-info__btn-more">Подробнее</a>
+                    <a href="#" class="btn result-info__btn-booking">Забронировать</a>
+                </div>
+                <div class="result__rank result-rank">
+                    <p class="result-rank__number-of-stars">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </p>
+                    <p class="result-rank__rating">Рейтинг: 8,9</p>
+                </div>        
+            </article>
+            <article class="result">
+                <img class="result__photo" src="https://via.placeholder.com/150x100" alt="Апартаменты Villas At Poco Diablo">
+                <div class="result__info result-info">
+                    <h4 class="result-info__name-of-housing">Villas At Poco Diablo</h4>
+                    <p class="result-info__type-of-housing">Апартаменты</p>
+                    <p class="result-info__price">от 2000 Р.</p>
+                    <a href="#" class="btn result-info__btn-more">Подробнее</a>
+                    <a href="#" class="btn result-info__btn-booking">Забронировать</a>
+                </div>
+                <div class="result__rank result-rank">
+                    <p class="result-rank__number-of-stars">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </p>
+                    <p class="result-rank__rating">Рейтинг: 9,2</p>
+                </div>        
+            </article>
+        </div>
+        
         <!-- Подвал -->
-        <footer class="main-footer main-footer--transparent-on">
+        <footer class="main-footer main-footer--transparent-off">
             <div class="visit">
                 <a class="visit__link" href="">#Visitsedona</a>
             </div>
