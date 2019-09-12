@@ -31,11 +31,11 @@
 				</a>
 			</nav>	
 		</header>
-
+		
+		<!-- Приемущества -->
 		<main class="content">
 			<h1 class="visually-hidden">Sedona</h1>
-			<p class="content__img"></p>
-			<!-- Приемущества -->
+			<p class="content__img" aria-label="Фото каньона и надпись: Добро пожаловать в великолепную Седону. Потому что Большой Каньон отстой"></p>			
 			<section class="features">
 				<h3 class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
 				<p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -49,17 +49,17 @@
 						<img src="img/photo-hotel-mp.jpg" alt="Фото отеля" class="features-item__photo" width="800" height="256">
 					</div>
 					<div class="features__item features-item">
-						<p class="features-item__icon features-item__icon--house"></p>
+						<p class="features-item__icon features-item__icon--house" aria-label="Иконка дома"></p>
 						<h3 class="features-item__title features-item__title--color-black">Жильё</h3>
 						<p class="features-item__text features-item__text--color-black">Рекомендуем пожить в 		настоящем мотеле, всё как в кино!</p>
 					</div>
 					<div class="features__item features-item">
-						<p class="features-item__icon features-item__icon--burger"></p>
+						<p class="features-item__icon features-item__icon--burger" aria-label="Иконка бургера"></p>
 						<h3 class="features-item__title features-item__title--color-black">Еда</h3>
 						<p class="features-item__text features-item__text--color-black">Всегда заказывайте 			фирменный бургер, вы не разочаруетесь!</p>
 					</div>
 					<div class="features__item features-item">
-						<p class="features-item__icon features-item__icon--gift"></p>
+						<p class="features-item__icon features-item__icon--gift" aria-label="Иконка подарка"></p>
 						<h3 class="features-item__title features-item__title--color-black">Сувениры</h3>
 						<p class="features-item__text features-item__text--color-black">Не только китайского, но 	и местного производства!</p>
 					</div>
@@ -93,54 +93,61 @@
 				<p class="search__text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<a class="btn search__btn">Поиск гостиницы в Седоне</a>
 				<!-- Форма -->
-				<form action="" class="search__form search-form">
+				<form action="" class="search__form search-form search__form search-form--visible">
 					<p class="search-form__date-of-arrival">
-						<label for="date">Дата заезда:</label>
-						<input type="date" name="date" id="date">
+						<label for="date-of-arrival">Дата заезда:</label>
+						<input type="date" name="date-of-arrival" id="date-of-arrival">
+						<i class="search-form__date-of-arrival--icon-calendar"></i>
 					</p>
 					<p class="search-form__date-of-departure">
-						<label for="time">Дата выезда:</label>
-						<input type="date" name="time" id="time">
-					</p>
+						<label for="date-of-departure">Дата выезда:</label>
+						<input type="date" name="date-of-departure" id="date-of-departure">
+						<i class="search-form__date-of-departur--icon-calendar"></i>
+					</p>	
 					<p class="search-form__amount-of-adults">
-						<label for="adults">Взрослые:</label>
-						<input type="text" name="adults" id="adults">
+						<label for="amount-of-adults">Взрослые:</label>
+						<input type="text" name="amount-of-adults" id="amount-of-adults">
+						<i class="search-form__amount-of-adults--more" aria-label="Количество взрослых: Больше">+</i>
+						<i class="search-form__amount-of-adults--less" aria-label="Количество взрослых: Больше">-</i>
 					</p>
 					<p class="search-form__amount-of-children">
-						<label for="children">Дети:</label>
-						<input type="text" name="children" id="children">
+						<label for="amount-of-children">Дети:</label>
+						<input type="text" name="amount-of-children" id="amount-of-children">
+						<i class="search-form__amount-of-children--more" aria-label="Количество детей: Больше">+</i>
+						<i class="search-form__amount-of-children--less" aria-label="Количество детей: Меньше">-</i>
 					</p>
-					<button class="btn search-form__btn">Найти</button>
+					<button class="btn search-form__btn" type="submit">Найти</button>
 				</form>
 				<!-- Карта -->
-				<div class="search__map">
+				<div class="search__map" aria-label="Карта расположения города Седона">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703822.5050688398!2d-111.74090071952061!3d34.973707790422225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1567879063403!5m2!1sru!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 				</div>
 			</section>
 		</main>
+
 		<!-- Подвал -->
 		<footer class="main-footer main-footer--transparent-on">
-			<h1 class="visually-hidden">Нижняя часть сайта</h1>
+			<h1 class="visually-hidden">Нижняя часть сайта. Подвал</h1>
 			<div class="visit">
 				<a class="visit__link" href="">#Visitsedona</a>
 			</div>
 			<div class="social">
 				<ul class="social__links">
 					<li class="social__link social__link--tw">
-						<a href="https://twitter.com">Twitter</a>
+						<a href="https://twitter.com" aria-label="Седона в Твиттере">Twitter</a>
 					</li>
 					<li class="social__link social__link--fb">
-						<a href="https://facebook.com">Facebook</a>
+						<a href="https://facebook.com" aria-label="Седона в Фейсбуке">Facebook</a>
 					</li>
 					<li class="social__link social__link--yt">
-						<a href="https://youtube.com">Youtube</a>
+						<a href="https://youtube.com" aria-label="Седона на Ютубе">Youtube</a>
 					</li>
 				</ul>
 			</div>
 			<div class="designed-by">
 				<p class="designed-by__title">Website by</p>
 				<a class="designed-by__link" href="https://htmlacademy.ru/intensive/htmlcss/" >
-					<img src="img/html-academy-icon.svg" alt="Лого HTML Academy" width="115" height="41">
+					<img src="img/html-academy-icon.svg" alt="Логотип HTML Academy" width="115" height="41">
 					<!-- <object
 						type="image/svg+xml"
 						data="html-academy-icon.svg">

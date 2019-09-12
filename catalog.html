@@ -27,7 +27,7 @@
                     </li>
                 </ul>
                 <a class="navigation__logo navigation__logo--link" href="index.html">
-                    <img src="img/logo.svg" alt="Логотип сайта Седоны." width="140" height="72">
+                    <img src="img/logo.svg" alt="Логотип сайта Седоны" width="140" height="72">
                 </a>
             </nav>
         </header>
@@ -70,12 +70,12 @@
                     <li class="filter-form__item">
                         <p class="filter-form__title">Стоимость в сутки (P):</p>
                         <div class="filter-form__prices">
-                            <input type="text" class="filter-form__price filter-form__price--left">
+                            <input type="text" class="filter-form__price filter-form__price--left" >
                             <input type="text" class="filter-form__price filter-form__price--right">
                         </div>
                         <div class="filter-form__toggles">
-                            <i class="filter-form__toggle filter-form__toggle--left"></i>
-                            <i class="filter-form__toggle ffilter-form__toggle--right"></i>
+                            <i class="filter-form__toggle filter-form__toggle--left" aria-label="Цена от"></i>
+                            <i class="filter-form__toggle ffilter-form__toggle--right" aria-label="Цена до"></i>
                         </div>
                         <button class="btn filter-form__btn" type="submit">Показать</button>
                     </li>
@@ -100,8 +100,16 @@
                 </li>
             </ul>
             <ul class="sort__arrows">
-                <li href="#" class="sort__arrow sort__arrow--up"></li>
-                <li href="#" class="sort__arrow sort__arrow--down"></li>
+                <li href="#" class="sort__arrow sort__arrow--up" >
+                    <a href="#">
+                        <img src="img/icon-up-dir.svg" alt="Стрелка вверх, больше, по возрастанию">
+                    </a>
+                </li>
+                <li href="#" class="sort__arrow sort__arrow--down">
+                    <a href="#">
+                        <img src="img/icon-down-dir.svg" alt="Стрелка вниз, меньше, по убыванию">
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -119,10 +127,10 @@
                 </div>
                 <div class="result__rank result-rank">
                     <p class="result-rank__number-of-stars">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
                     </p>
                     <p class="result-rank__rating">Рейтинг: 8,5</p>
                 </div>        
@@ -138,9 +146,9 @@
                 </div>
                 <div class="result__rank result-rank">
                     <p class="result-rank__number-of-stars">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
                     </p>
                     <p class="result-rank__rating">Рейтинг: 8,9</p>
                 </div>        
@@ -156,8 +164,8 @@
                 </div>
                 <div class="result__rank result-rank">
                     <p class="result-rank__number-of-stars">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
+                        <img src="img/star.svg" alt="Звезда рейтинга">
                     </p>
                     <p class="result-rank__rating">Рейтинг: 9,2</p>
                 </div>        
@@ -185,7 +193,7 @@
             </div>
             <div class="designed-by">
                 <p class="designed-by__title">Website by</p>
-                <a class="designed-by__link" href="https://htmlacademy.ru/intensive/htmlcss/" >
+                <a class="designed-by__link" href="https://htmlacademy.ru/intensive/htmlcss/" aria-label="Адрес сайта Академии">
                     <img src="img/html-academy-icon.svg" alt="Лого HTML Academy" width="115" height="41">
                 </a>
             </div>
