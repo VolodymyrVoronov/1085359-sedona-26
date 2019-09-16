@@ -1,28 +1,49 @@
-/* Позиционирование */
+    /* Positioning */
 
-/* Блочная модель */
+    /* Block model */
 
-/* Типографика */
+    /* Typography  */
 
-/* Оформление */
+    /* Decor       */
 
-/* Анимация */
+    /* Animation   */
 
-/* Разное */
+    /* Sundry      */
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans Narrow"),
+        url(../fonts/web/ptsans.woff) format("woff"),
+        url(../fonts/web/ptsans.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "PT Sans Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"),
+        url(../fonts/web/ptsansbold.woff) format("woff"),
+        url(../fonts/web/ptsansbold.woff2) format("woff2");
+}
 
 body {
-/* Позиционирование */
+    margin: 0;
+    padding: 0;
 
-/* Блочная модель */
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
 
-/* Типографика */
+    background-color: #fff;
+}
 
-/* Оформление */
-
-/* Анимация */
-
-/* Разное */
-
+a {
+    text-decoration: none;
 }
 
 .visually-hidden {
@@ -34,4 +55,326 @@ body {
 	height: 1px !important; 
 	width: 1px !important; 
 	overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.main-header {
+    background-color: #fff;
+}
+
+.navigation {
+    background-color: #fff;
+}
+
+.navigation__list {
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation__item {
+
+}
+
+.navigation__link {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+    color: #81b3d2;
+}
+
+.navigation__link:active {
+    color: #b2b2b2;
+}
+
+.navigation__link--current {
+    color: #766357;
+}
+
+.navigation__link--current:hover,
+.navigation__link--current:focus {
+    color: #766357;
+    list-style: none;
+}
+
+.content {
+
+}
+
+.content__img {
+    position: relative;
+
+    display: block;
+
+    width: 1200px;
+    height: 510px;
+    margin: 0;
+    padding: 0;
+
+    background-color: #a0bbcf;
+    background-image: url(../img/welcome.svg),
+                      url(../img/bg-mp.jpg);
+    background-size: 459px 353px, 1200px 510px;
+    background-position: center 75px, center 0;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.content__img::after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+
+    width: 1200px;
+    height: 59px;
+
+    background-image: url(../img/polygon-mp.svg);
+    background-repeat: no-repeat;
+}
+
+.features {
+    
+}
+
+.features__title {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.features-item__text {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.features__items {
+    display: ;
+}
+
+.features__item {
+    display: block;
+}
+
+.features__item--bg-color-blue {
+    background-color: #81b3d2;
+}
+
+.features__item--bg-color-gray {
+    background-color: #eeeeee;
+}
+
+.features-item__title {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.features-item__title--color-white {
+    color: #fff;
+}
+
+.features-item__text {
+    color: #000;
+}
+
+.features-item__number {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 26px; 
+}
+
+.features-item__number--color-white {
+    color: #fff;
+}
+
+.features-item__number--color-black {
+    color: #000;
+}
+
+.features-item__text {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 26px;  
+}
+
+.features-item__text--color-white {
+    color: #fff;
+}
+
+.features-item__text--color-black {
+    color: #000;
+}
+
+.search {
+
+}
+
+.search__title {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.search__text {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 26px;  
+}
+
+.search__btn {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+    color: #fff;
+
+    background-color: #766357;
+
+    cursor: pointer;
+}
+
+.search__btn:hover,
+.search__btn:focus {
+    background-color: #604e43;
+
+    cursor: pointer;
+}
+
+.search__btn:active {
+    color: #857871;
+    background-color: #503e33;
+
+    cursor: pointer;
+}
+
+.search-form__date-of-arrival label,
+.search-form__date-of-departure label,
+.search-form__amount-of-adults label,
+.search-form__amount-of-children label {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.search-form__btn {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+    color: #fff;
+
+    background-color: #81b3d2;
+
+    cursor: pointer;
+}
+
+.search-form__btn:hover,
+.search-form__btn:focus {
+    background-color: #669ec0;
+
+    cursor: pointer;
+}
+
+.search-form__btn:active {
+    color: #88b6d1;
+    background-color: #5496bd;
+
+    cursor: pointer;
+}
+
+.search__map {
+    display: block;
+    width: 1200px;
+    height: 475px;
+
+    background-image: url(../img/bg-map-mp.JPG);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.main-footer {
+    background-color: #fff;
+}
+
+.main-footer--transparent-on {
+    opacity: 0.9;
+}
+
+.visit {
+
+}
+
+.visit__link {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000;
+}
+
+.visit__link:hover,
+.visit__link:focus {
+    color: #81b3d2;
+}
+
+.visit__link:active {
+    color: #b2b2b2; 
+}
+
+.social {
+
+}
+
+.social__links {
+    list-style: none;
+    text-decoration: none;
+}
+
+.social__link a {
+    display: inline-block;
+
+    background-color: #81b3d2;
+}
+
+.social__link a:hover,
+.social__link a:focus {
+    background-color: #669ec0;
+}
+
+.social__link a:active {
+    background-color: #5496bd;
+}
+
+.designed-by {
+
+}
+
+.designed-by__title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+}
+
+.designed-by__link:hover .designed-by__academy-logo path,
+.designed-by__link:focus .designed-by__academy-logo path,
+.designed-by__link:hover .designed-by__academy-logo rect,
+.designed-by__link:focus .designed-by__academy-logo rect  {
+    fill: #81b3d2;
+}
+
+.designed-by__link:active .designed-by__academy-logo path,
+.designed-by__link:active .designed-by__academy-logo path,
+.designed-by__link:active .designed-by__academy-logo rect,
+.designed-by__link:active .designed-by__academy-logo rect  {
+    fill: #bdbbbc;
 }
