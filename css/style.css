@@ -13,36 +13,25 @@
 @font-face {
     font-family: "PT Sans";
     font-style: normal;
-    font-weight: 400;
-    src: 
-        local("PT Sans"),
-        url(../fonts/web/ptsans.woff) format("woff"),
-        url(../fonts/web/ptsans.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: "PT Sans Bold";
-    font-style: normal;
-    font-weight: 700;
-    src: 
-        local("PT Sans Bold"),
-        url(../fonts/web/ptsansbold.woff) format("woff"),
-        url(../fonts/web/ptsansbold.woff2) format("woff2");
+    font-weight: 400, 700;
+    src:   
+        url("../fonts/ptsans.woff2") format("woff2"),
+        url("../fonts/ptsansbold.woff2") format("woff2"),
+        url("../fonts/ptsans.woff") format("woff"),
+        url("../fonts/ptsansbold.woff") format("woff");  
 }
 
 body {
     min-width: 1220px;
     margin: 0;
     padding: 0;
-
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: #000;
+    color: #000000;
     text-transform: uppercase;
-
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 a {
@@ -73,18 +62,16 @@ a {
 /* index */
 
 .main-header {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .navigation {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .navigation__list {
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -93,7 +80,7 @@ a {
 }
 
 .navigation__link {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -127,17 +114,14 @@ a {
 
 .content__img {
     position: relative;
-
     display: block;
-
     width: 1200px;
     height: 510px;
     margin: 0;
     padding: 0;
-
     background-color: #a0bbcf;
-    background-image: url(../img/welcome.svg),
-                      url(../img/bg-mp.jpg);
+    background-image: url("../img/welcome.svg"),
+                      url("../img/bg-mp.jpg");
     background-size: 459px 353px, 1200px 510px;
     background-position: center 75px, center 0;
     background-repeat: no-repeat, no-repeat;
@@ -147,11 +131,9 @@ a {
     position: absolute;
     content: "";
     bottom: -2px;
-
     width: 1200px;
     height: 59px;
-
-    background-image: url(../img/polygon-mp.svg);
+    background-image: url("../img/polygon-mp.svg");
     background-repeat: no-repeat;
 }
 
@@ -160,15 +142,23 @@ a {
 }
 
 .features__title {
-    font-family: "PT Sans Bold", sans-serif;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
+    font-weight: 700;
 }
 
 .features-item__text {
+    display: block;
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 26px;
+    font-weight: 400;
 }
 
 .features__items {
@@ -177,6 +167,8 @@ a {
 
 .features__item {
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .features__item--bg-color-blue {
@@ -188,45 +180,62 @@ a {
 }
 
 .features-item__title {
-    font-family: "PT Sans Bold", sans-serif;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 21px;
+    font-weight: 700;
 }
 
 .features-item__title--color-white {
-    color: #fff;
+    color: #ffffff;
+}
+
+
+.features-item__photo {
+    display: block;
+    width: 800px;
+    height: 256px;
+    background-color: #a27561;
 }
 
 .features-item__text {
-    color: #000;
+    color: #000000;
 }
 
 .features-item__number {
+    display: block;
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 26px; 
+    font-weight: 400;
 }
 
 .features-item__number--color-white {
-    color: #fff;
+    color: #ffffff;
 }
 
 .features-item__number--color-black {
-    color: #000;
+    color: #000000;
 }
 
 .features-item__text {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 26px;  
+    font-weight: 400;
 }
 
 .features-item__text--color-white {
-    color: #fff;
+    color: #ffffff;
 }
 
 .features-item__text--color-black {
-    color: #000;
+    color: #000000;
 }
 
 .search {
@@ -234,39 +243,38 @@ a {
 }
 
 .search__title {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
+    font-weight: 700;
 }
 
 .search__text {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 26px;  
+    font-weight: 400;
 }
 
 .search__btn {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
-    color: #fff;
-
+    font-weight: 700;
+    color: #ffffff;
     background-color: #766357;
-
     cursor: pointer;
 }
 
 .search__btn:hover,
 .search__btn:focus {
     background-color: #604e43;
-
     cursor: pointer;
 }
 
 .search__btn:active {
     color: #857871;
     background-color: #503e33;
-
     cursor: pointer;
 }
 
@@ -274,20 +282,20 @@ a {
 .search-form__date-of-departure label,
 .search-form__amount-of-adults label,
 .search-form__amount-of-children label {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
+    font-weight: 700;
 }
 
 .search-form__date-of-arrival input[type="date"],
 .search-form__date-of-departure input[type="date"] {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #000;
-
+    font-weight: 700;
+    color: #000000;
     border: none;
-
     background-color: #f2f2f2;
 }
 
@@ -298,20 +306,19 @@ a {
 
 .search-form__date-of-arrival input[type="date"]:focus,
 .search-form__date-of-departure input[type="date"]:focus {
-    background-color: #fff;
+    background-color: #ffffff;
     outline: 2px solid #e5e5e5;
 }
 
 .search-form__amount-of-adults input[type="text"],
 .search-form__amount-of-children input[type="text"]  {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
+    font-weight: 700;
     text-align: center;
-    color: #000;
-
+    color: #000000;
     border: none;
-
     background-color: #f2f2f2;
 }
 
@@ -322,7 +329,7 @@ a {
 
 .search-form__amount-of-adults input[type="text"]:focus,
 .search-form__amount-of-children input[type="text"]:focus {
-    background-color: #fff    ;
+    background-color: #ffffff;
     outline: 2px solid #e5e5e5;
 }
 
@@ -330,17 +337,15 @@ a {
     display: block;
     width: 21px;
     height: 22px;
-
-    background-color: #fff;
+    background-color: #ffffff;
     border: none;
-
     cursor: pointer;
     box-sizing: content-box;
 }
 
 .search-form__date-of-arrival--icon-calendar svg:hover,
 .search-form__date-of-arrival--icon-calendar svg:focus {
-    fill: #000;
+    fill: #000000;
 }
 
 .search-form__date-of-arrival--icon-calendar svg:active {
@@ -351,17 +356,15 @@ a {
     display: block;
     width: 21px;
     height: 22px;
-
-    background-color: #fff;
+    background-color: #ffffff;
     border: none;
-
     cursor: pointer;
     box-sizing: content-box;
 }
 
 .search-form__date-of-departur--icon-calendar svg:hover,
 .search-form__date-of-departur--icon-calendar svg:focus {
-    fill: #000;
+    fill: #000000;
 }
 
 .search-form__date-of-departur--icon-calendar svg:active {
@@ -369,27 +372,24 @@ a {
 }
 
 .search-form__btn {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
-    color: #fff;
-
+    font-weight: 700;
+    color: #ffffff;
     background-color: #81b3d2;
-
     cursor: pointer;
 }
 
 .search-form__btn:hover,
 .search-form__btn:focus {
     background-color: #669ec0;
-
     cursor: pointer;
 }
 
 .search-form__btn:active {
     color: #88b6d1;
     background-color: #5496bd;
-
     cursor: pointer;
 }
 
@@ -397,14 +397,13 @@ a {
     display: block;
     width: 1200px;
     height: 475px;
-
-    background-image: url(../img/bg-map-mp.JPG);
+    background-image: url("../img/bg-map-mp.JPG");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .main-footer {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .main-footer--transparent-on {
@@ -416,10 +415,11 @@ a {
 }
 
 .visit__link {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
-    color: #000;
+    font-weight: 700;
+    color: #000000;
 }
 
 .visit__link:hover,
@@ -442,7 +442,6 @@ a {
 
 .social__link a {
     display: inline-block;
-
     background-color: #81b3d2;
 }
 
@@ -463,20 +462,21 @@ a {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #000;
+    font-weight: 400;
+    color: #000000;
 }
 
-.designed-by__link:hover .designed-by__academy-logo path,
-.designed-by__link:focus .designed-by__academy-logo path,
-.designed-by__link:hover .designed-by__academy-logo rect,
-.designed-by__link:focus .designed-by__academy-logo rect  {
+.designed-by__link:hover svg,
+.designed-by__link:focus svg,
+.designed-by__link:hover svg,
+.designed-by__link:focus svg  {
     fill: #81b3d2;
 }
 
-.designed-by__link:active .designed-by__academy-logo path,
-.designed-by__link:active .designed-by__academy-logo path,
-.designed-by__link:active .designed-by__academy-logo rect,
-.designed-by__link:active .designed-by__academy-logo rect  {
+.designed-by__link:active svg,
+.designed-by__link:active svg,
+.designed-by__link:active svg,
+.designed-by__link:active svg  {
     fill: #bdbbbc;
 }
 
@@ -484,11 +484,9 @@ a {
 
 .filter {
     display: block;
-
     width: 1200px;
     height: 220px;
-
-    background-image: url(../img/bg-filter-cp.jpg);
+    background-image: url("../img/bg-filter-cp.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
@@ -499,7 +497,6 @@ a {
 
 .filter-form__items {
     display: flex;
-
     list-style: none;
 }
 
@@ -508,10 +505,11 @@ a {
 }
 
 .filter-form__title {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
-    color: #fff;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .filter-form__option {
@@ -522,30 +520,29 @@ a {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #fff;
+    font-weight: 400;
+    color: #ffffff;
 }
 
 .filter-form__btn {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #fff;
+    font-weight: 400;
+    color: #ffffff;
     text-transform: uppercase;
-
     background: none;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-radius: 2px;
     outline: none;
-
     list-style: none;
     cursor: pointer;
 }
 
 .filter-form__btn:hover,
 .filter-form__btn:focus {
-    color: #000;
-    background-color: #fff;
-
+    color: #000000;
+    background-color: #ffffff;
     cursor: pointer;
 }
 
@@ -554,17 +551,19 @@ a {
 }
 
 .sort h3 {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
-    color: #000;
+    font-weight: 700;
+    color: #000000;
 }
 
 .sort p {
     font-family: "PT Sans", sans-serif;
     font-size: 12px;
     line-height: 18px;
-    color: #000;
+    font-weight: 400;
+    color: #000000;
 }
 
 .sort__selects {
@@ -579,8 +578,8 @@ a {
     font-family: "PT Sans", sans-serif;
     font-size: 12px;
     line-height: 18px;
+    font-weight: 400;
     color: #b2b2b2;
-
     border-bottom: 1px dotted #81b3d2;
 }
 
@@ -590,16 +589,13 @@ a {
 }
 
 .sort__select a:active {
-    color: #000;
-
+    color: #000000;
     border-bottom: none;
 }
 
 .sort__select--current a {
     color: #81b3d2;
-
     border-bottom: none;
-
     cursor: default;
 }
 
@@ -631,7 +627,6 @@ a {
 
 .result {
     display: flex;
-
     border-top: 1px solid #e5e5e5;
 }
 
@@ -643,7 +638,6 @@ a {
     display: block;
     width: 135px;
     height: 90px;
-
     background-color: #897371;
 }
 
@@ -652,10 +646,11 @@ a {
 }
 
 .result-info__name-of-housing {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
-    color: #000;
+    font-weight: 700;
+    color: #000000;
 }
 
 .result-info__name-of-housing:hover,
@@ -672,56 +667,51 @@ a {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #000;
+    font-weight: 400;
+    color: #000000;
 }
 
 .result-info__btn-more {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #fff;
-
+    font-weight: 700;
+    color: #ffffff;
     background-color: #81b3d2;
-
     cursor: pointer;
 }
 
 .result-info__btn-more:hover,
 .result-info__btn-more:focus {
     background-color: #669ec0;
-
     cursor: pointer;
 }
 
 .result-info__btn-more:active {
     color: #88b6d1;
     background-color: #5496bd;
-
     cursor: pointer;
 }
 
 .result-info__btn-booking {
-    font-family: "PT Sans Bold", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    color: #fff;
-
+    font-weight: 700;
+    color: #ffffff;
     background-color: #766357;
-
     cursor: pointer;
 }
 
 .result-info__btn-booking:hover,
 .result-info__btn-booking:focus {
     background-color: #604e43;
-
     cursor: pointer;
 }
 
 .result-info__btn-booking:active {
     color: #857871;
     background-color: #503e33;
-
     cursor: pointer;
 }
 
@@ -733,44 +723,32 @@ a {
 
 .result-rank__number-of-stars {
     display: inline-block;
+    height: 17px;
+    background-image: url("../img/star.svg");
+    background-repeat: space;
+    background-position: right 0;
 }
 
 .result-rank__number-of-stars--four {
-    width: 87px;
-    height: 17px;
-
-    background-image: url(../img/star.svg);
-    background-repeat: space;
-    background-position: right 0;
+    width: 87px;   
 }
 
 .result-rank__number-of-stars--three {
     width: 67px;
-    height: 17px;
-
-    background-image: url(../img/star.svg);
-    background-repeat: space;
-    background-position: right 0;
 }
 
 .result-rank__number-of-stars--two {
     width: 41px;
-    height: 17px;
-
-    background-image: url(../img/star.svg);
-    background-repeat: space;
-    background-position: right 0;
 }
 
 .result-rank__rating {
     display: block;
     width: 110px;
-
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
+    font-weight: 400;
     text-align: center;
     color: #8b8b8b;
-
     background-color: #f2f2f2;
 }
