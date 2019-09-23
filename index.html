@@ -4,8 +4,9 @@
     	<meta charset="utf-8">
     	<title>HTML Academy: Седона</title>
     	<link rel="stylesheet" href="css/normalize.css">
-    	<link rel="stylesheet" href="css/style.css">
-  	</head>
+		<link rel="stylesheet" href="css/style.css">
+	  </head>
+<div class="bg-color-of-website">
 <body>
     <div class="container">
 		<!-- Навигация -->
@@ -162,11 +163,11 @@
 				<p class="search__text">Укажите предполагаемые даты поездки,<br>  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<a class="btn search__btn" tabindex="0">Поиск гостиницы в Седоне</a>
 				<!-- Форма -->
-				<form action="https://echo.htmlacademy.ru" class="search__form search-form search__form search-form--visible" method="post">
+				<form action="https://echo.htmlacademy.ru" class="search__form search-form search__form" method="post">
 					<p class="search-form__date-of-arrival">
 						<label for="date-of-arrival">Дата заезда:</label>
-						<input type="date" name="date-of-arrival" id="date-of-arrival">
-						<button class="search-form__date-of-arrival--icon-calendar" type="button">
+						<input type="text" name="date-of-arrival" id="date-of-arrival" placeholder="24 апреля 2017">
+						<button class="search-form__date-of-arrival--icon-calendar" type="button" tabindex="0">
 							<svg  fill="#cacaca" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
 								<g id="calendar_1_">
@@ -192,8 +193,8 @@
 					</p>
 					<p class="search-form__date-of-departure">
 						<label for="date-of-departure">Дата выезда:</label>
-						<input type="date" name="date-of-departure" id="date-of-departure">
-						<button class="search-form__date-of-departur--icon-calendar" type="button">
+						<input type="text" name="date-of-departure" id="date-of-departure" placeholder="4 июля 2017">
+						<button class="search-form__date-of-departur--icon-calendar" type="button" tabindex="0">
 							<svg fill="#cacaca" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
 								<g id="calendar_1_">
@@ -216,16 +217,16 @@
 								</g>
 							</svg>
 						</button>
-					</p>	
+					</p>
 					<p class="search-form__amount-of-adults">
 						<label for="amount-of-adults">Взрослые:</label>
-						<input type="text" name="amount-of-adults" id="amount-of-adults">
-						<button class="search-form__amount-of-adults--more" aria-label="Количество взрослых: 	Больше" type="button">+</button>
-						<button class="search-form__amount-of-adults--less" aria-label="Количество взрослых: 	Больше" type="button">-</button>
+						<input type="text" name="amount-of-adults" id="amount-of-adults" placeholder="2">
+						<button class="search-form__amount-of-adults--more" aria-label="Количество взрослых: Больше" type="button">+</button>
+						<button class="search-form__amount-of-adults--less" aria-label="Количество взрослых: Больше" type="button">-</button>
 					</p>
 					<p class="search-form__amount-of-children">
 						<label for="amount-of-children">Дети:</label>
-						<input type="text" name="amount-of-children" id="amount-of-children">
+						<input type="text" name="amount-of-children" id="amount-of-children" placeholder="0">
 						<button class="search-form__amount-of-children--more" aria-label="Количество детей: Больше" type="button">+</buttont>
 						<button class="search-form__amount-of-children--less" aria-label="Количество детей: Меньше" type="button">-</button>
 					</p>
@@ -233,7 +234,7 @@
 				</form>
 				<!-- Карта -->
 				<div class="search__map" aria-label="Карта расположения города Седона">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703822.5050688398!2d-111.74090071952061!3d34.973707790422225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1567879063403!5m2!1sru!2sde" width="1200" height="475" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703822.5050688398!2d-111.74090071952061!3d34.973707790422225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1567879063403!5m2!1sru!2sde" width="1200" height="595" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 				</div>
 			</section>
 		</main>
@@ -278,7 +279,6 @@
 								<path d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
 								M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
 							</svg>
-
 						</a>
 					</li>
 				</ul>
@@ -293,6 +293,7 @@
 		
 	</div> 
 	<!-- Скрипты -->
-	<script src=""></script>
+	<script src="js/popup-hidden-show.js"></script>
 </body>
+</div>
 </html>

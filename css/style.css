@@ -28,6 +28,13 @@
         url("../fonts/ptsansbold.woff") format("woff");  
 }
 
+.bg-color-of-website {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
 body {
     min-width: 1220px;
     margin: 0;
@@ -43,6 +50,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+*::placeholder {
+    color: #000000;
 }
 
 .visually-hidden {
@@ -61,7 +72,8 @@ a {
     display: block;
     width: 1200px;
     margin: 0 auto;
-    box-shadow: 0 0 15px #d4d4d4;
+    box-shadow: 0 0 20px #d4d4d4;
+    background-color: #fff;
 }
 
 .btn {
@@ -91,29 +103,40 @@ a {
 }
 
 .navigation__item {
+    display: block;
+    width: 166px;
     margin: 0;
     margin-top: 15px;
     padding: 0;
 }
 
-.navigation__item:nth-child(1) {
-    margin-left: 72px;
+.navigation__item:nth-child(1),
+.navigation__item:nth-child(5) {
+    padding-left: 73px;
+    text-align: left;
 }
 
-.navigation__item:nth-child(2) {
-    margin-left: 147px;
+.navigation__item:nth-child(2),
+.navigation__item:nth-child(6) {
+    padding-left: 73px;
+    text-align: left;
 }
 
-.navigation__item:nth-child(3) {
-    margin-left: 388px;
+.navigation__item:nth-child(3),
+.navigation__item:nth-child(7) {
+    margin-left: 244px;
+    padding-right: 73px;
+    text-align: right;
 }
 
-.navigation__item:nth-child(4) {
-    margin-left: 162px;
+.navigation__item:nth-child(4),
+.navigation__item:nth-child(8) {
+    padding-right: 73px;
+    text-align: right;
 }
 
 .navigation__link {
-    display: block;
+    display: inline-block;
     margin: 0;
     padding: 0;
     font-family: "PT Sans", sans-serif;
@@ -145,13 +168,11 @@ a {
 }
 
 .navigation__logo {
+    position: absolute;
     display: block;
     align-self: center;
     width: 140px;
-    margin-top: -42px;
-    margin-left: 52px;
-    margin-right: 52px;
-    text-align: center;
+    margin-top: -1px;
     z-index: 2;
 }
 
@@ -165,7 +186,7 @@ a {
     width: 1200px;
     height: 510px;
     margin: 0;
-    margin-top: -22px;
+    margin-top: 15px;
     padding: 0;
     background-color: #a0bbcf;
     background-image: url("../img/welcome.svg"),
@@ -349,7 +370,9 @@ a {
 }
 
 .search {
-
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .search__title {
@@ -408,28 +431,87 @@ a {
 }
 
 .search__form {
+    position: absolute;
     display: block;
     width: 568px;
     height: 395px;
     margin: 0;
     margin: 0 auto;
+    margin-left: 316px;
     padding: 0;
-    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
     z-index: 10;
+    animation: popup-show 0.6s;
 }
+
+
+@keyframes popup-show {
+    0% {
+      transform: translateY(-1000px);
+    }
+    70% {
+      transform: translateY(30px);
+    }
+    90% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.search-form--visible {
+    display: none;
+}
+
+.search-form__date-of-arrival,
+.search-form__date-of-departure,
+.search-form__amount-of-adults,
+.search-form__amount-of-children {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.search-form__date-of-arrival {
+    margin-top: 55px;
+}
+
+.search-form__date-of-departure,.search-form__amount-of-adults,
+.search-form__amount-of-children {
+    margin-top: 30px;
+}
+
 
 .search-form__date-of-arrival label,
 .search-form__date-of-departure label,
 .search-form__amount-of-adults label,
 .search-form__amount-of-children label {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
 }
 
-.search-form__date-of-arrival input[type="date"],
-.search-form__date-of-departure input[type="date"] {
+.search-form__date-of-arrival label,.search-form__date-of-departure label,.search-form__amount-of-adults label {
+    margin-left: 55px;
+}
+
+.search-form__amount-of-children label {
+    margin-left: 50px;
+}
+
+.search-form__date-of-arrival input[type="text"],
+.search-form__date-of-departure input[type="text"],.search-form__amount-of-adults input[type="text"],
+.search-form__amount-of-children input[type="text"] {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -439,45 +521,59 @@ a {
     background-color: #f2f2f2;
 }
 
-.search-form__date-of-arrival input[type="date"]:hover,
-.search-form__date-of-departure input[type="date"]:hover {
-    background-color: #ebebeb;
-}
-
-.search-form__date-of-arrival input[type="date"]:focus,
-.search-form__date-of-departure input[type="date"]:focus {
-    background-color: #ffffff;
-    outline: 2px solid #e5e5e5;
-}
-
-.search-form__amount-of-adults input[type="text"],
-.search-form__amount-of-children input[type="text"]  {
-    font-family: "PT Sans", sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 700;
-    text-align: center;
-    color: #000000;
-    border: none;
-    background-color: #f2f2f2;
-}
-
-.search-form__amount-of-adults input[type="text"]:hover,
+.search-form__date-of-arrival input[type="text"]:hover,
+.search-form__date-of-departure input[type="text"]:hover,.search-form__amount-of-adults input[type="text"]:hover,
 .search-form__amount-of-children input[type="text"]:hover {
     background-color: #ebebeb;
 }
 
+.search-form__date-of-arrival input[type="text"]:focus,
+.search-form__date-of-departure input[type="text"]:focus,
 .search-form__amount-of-adults input[type="text"]:focus,
 .search-form__amount-of-children input[type="text"]:focus {
     background-color: #ffffff;
     outline: 2px solid #e5e5e5;
 }
 
+.search-form__date-of-arrival input[type="text"],
+.search-form__date-of-departure input[type="text"] {
+    width: 298px;
+    padding: 8px 40px 8px 8px;
+}
+
+.search-form__date-of-arrival input[type="text"] {
+    margin-left: 21px;
+}
+
+.search-form__date-of-departure input[type="text"] {
+    margin-left: 17px;
+}
+
+.search-form__amount-of-adults input[type="text"],
+.search-form__amount-of-children input[type="text"] {
+    display: inline-block;
+    width: 39px;
+    padding: 8px 38px 8px 38px;
+    text-align: center;
+}
+
+.search-form__amount-of-adults input[type="text"] {
+    margin-left: 37px;
+}
+
+.search-form__amount-of-children input[type="text"] {
+    margin-left: 20px;
+}
+
 .search-form__date-of-arrival--icon-calendar {
+    position: absolute;
+    top: 58px;
+    right: 58px;
     display: block;
+    padding: 5px;
     width: 21px;
     height: 22px;
-    background-color: #ffffff;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     box-sizing: content-box;
@@ -493,10 +589,14 @@ a {
 }
 
 .search-form__date-of-departur--icon-calendar {
+    position: absolute;
+    top: 125px;
+    right: 58px;
     display: block;
+    padding: 5px;
     width: 21px;
     height: 22px;
-    background-color: #ffffff;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     box-sizing: content-box;
@@ -511,12 +611,73 @@ a {
     fill: #81b3d2;
 }
 
+.search-form__amount-of-adults--more,
+.search-form__amount-of-adults--less,
+.search-form__amount-of-children--more,
+.search-form__amount-of-children--less {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    padding: 0px 10px 0px 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #a9a9a9;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.search-form__amount-of-adults--more:hover,
+.search-form__amount-of-adults--less:hover,
+.search-form__amount-of-children--more:hover,
+.search-form__amount-of-children--less:hover {
+    color: #000000;
+}
+
+.search-form__amount-of-adults--more:active,
+.search-form__amount-of-adults--less:active,
+.search-form__amount-of-children--more:active,
+.search-form__amount-of-children--less:active {
+    color: #81b3d2;
+}
+
+.search-form__amount-of-adults--less {
+    top: 189px;
+    left: 170px;
+}
+
+.search-form__amount-of-adults--more {
+    top: 191px;
+    left: 245px;
+}
+
+.search-form__amount-of-children--less {
+    top: 189px;
+    left: 400px;
+}
+
+.search-form__amount-of-children--more {
+    top: 191px;
+    left: 476px;
+}
+
 .search-form__btn {
+    display: block;
+    width: 458px;
+    margin: 0;
+    margin: 0 auto;
+    margin-top: 55px;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: "PT Sans", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    text-transform: uppercase;
     color: #ffffff;
+    border: none;
     background-color: #81b3d2;
     cursor: pointer;
 }
@@ -536,28 +697,38 @@ a {
 .search__map {
     display: block;
     width: 1200px;
-    height: 475px;
+    height: 595px;
+    /* margin-top: -395px; */
     background-image: url("../img/bg-map-mp.JPG");
-    background-position: 50% 50%;
+    background-position: 50% 56%;
     background-repeat: no-repeat;
 }
 
 .main-footer {
     display: flex;
     flex-direction: row;
-    background-color: #ffffff;
+    flex-wrap: wrap;
 }
 
 .main-footer--transparent-on {
-    opacity: 0.9;
+    position: relative;
+    margin: 0;
+    margin-top: -120px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 11;
+}
+
+.main-footer--transparent-off {
+    background-color: #ffffff;
 }
 
 .visit {
     display: block;
     margin: 0;
-    margin-top: 50px;
+    margin-top: 46px;
     margin-left: 133px;
-    margin-bottom: 55px;
+    margin-bottom: 48px;
     padding: 0;
 }
 
@@ -581,7 +752,7 @@ a {
 .social {
     display: block;
     margin: 0;
-    margin-top: 37px;
+    margin-top: 36px;
     margin-left: 256px;
     padding: 0;
 }
@@ -647,6 +818,14 @@ a {
     color: #000000;
 }
 
+.designed-by__link {
+    display: block;
+    width: 115px;
+    height: 41px;
+    margin: 0;
+    padding: 0;
+}
+
 .designed-by__link:hover svg,
 .designed-by__link:focus svg,
 .designed-by__link:hover svg,
@@ -661,12 +840,14 @@ a {
     fill: #bdbbbc;
 }
 
+
+
 /* catalog */
 
 .filter {
     display: block;
     width: 1200px;
-    height: 220px;
+    min-height: 220px;
     background-image: url("../img/bg-filter-cp.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -675,20 +856,40 @@ a {
 .filter__form {
     display: block;
     margin: 0;
-    margin-top: -34px;
+    margin-top: 15px;
     padding: 0;
 }
 
 .filter-form__items {
     display: flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 .filter-form__item {
     display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-form__item:nth-child(1) {
+    margin-left: 73px;
+}
+
+.filter-form__item:nth-child(2) {
+    margin-left: 114px;
+}
+
+.filter-form__item:nth-child(3) {
+    margin-left: 378px;
 }
 
 .filter-form__title {
+    display: block;
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
@@ -697,7 +898,9 @@ a {
 }
 
 .filter-form__option {
-
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .filter-form__prices {
@@ -832,6 +1035,8 @@ a {
 
 .sort__arrow {
     display: block;
+    width: 11px;
+    height: 10px;
 }
 
 .sort__arrow:hover polygon,
@@ -864,7 +1069,7 @@ a {
 .result {
     display: flex;
     margin: 0;
-    padding: 30px 0px 30px 72px;
+    padding: 30px 0px 24px 72px;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -908,6 +1113,7 @@ a {
 
 .result-info__type-of-housing {
     display: inline-block;
+    width: 110px;
 }
 
 .result-info__price {
@@ -981,12 +1187,12 @@ a {
 
 .result__rank {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0;
     margin-left: auto;
     margin-right: 76px;
     padding: 0;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .result-rank__number-of-stars {
