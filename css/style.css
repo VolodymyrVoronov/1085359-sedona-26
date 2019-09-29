@@ -39,10 +39,11 @@ body {
     min-width: 1220px;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    font-display : swap;
     color: #000000;
     text-transform: uppercase;
     background-color: #ffffff;
@@ -141,7 +142,7 @@ a {
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -188,7 +189,7 @@ a {
     position: relative;
     display: block;
     width: 1200px;
-    height: 510px;
+    min-height: 510px;
     margin: 0;
     margin-top: 15px;
     padding: 0;
@@ -206,7 +207,7 @@ a {
     content: "";
     bottom: -2px;
     width: 1200px;
-    height: 59px;
+    min-height: 59px;
     background-image: url("../img/polygon-mp.svg");
     background-repeat: no-repeat;
 }
@@ -222,7 +223,7 @@ a {
     margin: 0;
     margin-top: 58px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -234,7 +235,7 @@ a {
     margin: 0;
     margin-top: 28px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -246,7 +247,7 @@ a {
     display: block;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -286,7 +287,7 @@ a {
     margin: 0;
     margin-top: 47px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
@@ -301,7 +302,7 @@ a {
 .features-item__photo {
     display: block;
     width: 800px;
-    height: 256px;
+    min-height: 256px;
     background-color: #a27561;
 }
 
@@ -314,7 +315,7 @@ a {
     margin: 0;
     margin-top: 23px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px; 
     font-weight: 400;
@@ -335,7 +336,7 @@ a {
     margin-top: 22px;
     margin-bottom: 52px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;  
     font-weight: 400;
@@ -384,7 +385,7 @@ a {
     margin: 0;
     margin-top: 50px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -396,7 +397,7 @@ a {
     margin: 0;
     margin-top: 22px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;  
     font-weight: 400;
@@ -412,7 +413,7 @@ a {
     padding: 0;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -438,21 +439,20 @@ a {
     position: absolute;
     display: block;
     width: 568px;
-    height: 395px;
+    min-height: 395px;
     margin: 0;
     margin: 0 auto;
     margin-left: 316px;
     padding: 0;
     background-color: #ffffff;
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
-    z-index: 10;
+    z-index: 1;
     animation: popup-show 0.6s;
 }
 
-
 @keyframes popup-show {
     0% {
-        transform: translateY(-1000px);
+        transform: translateY(-568px);
     }
     70% {
         transform: translateY(30px);
@@ -498,7 +498,7 @@ a {
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -520,7 +520,7 @@ a {
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -587,6 +587,10 @@ a {
     box-sizing: content-box;
 }
 
+.search-form__date-of-arrival--icon-calendar svg {
+    fill: #cacaca;
+}
+
 .search-form__date-of-arrival--icon-calendar svg:hover,
 .search-form__date-of-arrival--icon-calendar svg:focus {
     fill: #000000;
@@ -596,7 +600,7 @@ a {
     fill: #81b3d2;
 }
 
-.search-form__date-of-departur--icon-calendar {
+.search-form__date-of-departure--icon-calendar {
     position: absolute;
     top: 125px;
     right: 58px;
@@ -610,12 +614,16 @@ a {
     box-sizing: content-box;
 }
 
-.search-form__date-of-departur--icon-calendar svg:hover,
-.search-form__date-of-departur--icon-calendar svg:focus {
+.search-form__date-of-departure--icon-calendar svg {
+    fill: #cacaca;
+}
+
+.search-form__date-of-departure--icon-calendar svg:hover,
+.search-form__date-of-departure--icon-calendar svg:focus {
     fill: #000000;
 }
 
-.search-form__date-of-departur--icon-calendar svg:active {
+.search-form__date-of-departure--icon-calendar svg:active {
     fill: #81b3d2;
 }
 
@@ -624,10 +632,13 @@ a {
 .search-form__amount-of-children--more,
 .search-form__amount-of-children--less {
     position: absolute;
+    display: block;
     margin: 0;
     padding: 0;
-    padding: 0px 10px 0px 10px;
+    padding: 9px 10px 9px 10px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 30px;
+    line-height: 21px;
     font-weight: 700;
     color: #a9a9a9;
     background-color: transparent;
@@ -651,22 +662,22 @@ a {
 }
 
 .search-form__amount-of-adults--less {
-    top: 189px;
+    top: 185px;
     left: 170px;
 }
 
 .search-form__amount-of-adults--more {
-    top: 191px;
+    top: 187px;
     left: 245px;
 }
 
 .search-form__amount-of-children--less {
-    top: 189px;
+    top: 185px;
     left: 400px;
 }
 
 .search-form__amount-of-children--more {
-    top: 191px;
+    top: 187px;
     left: 476px;
 }
 
@@ -679,7 +690,7 @@ a {
     padding: 0;
     padding-top: 16px;
     padding-bottom: 16px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -705,24 +716,28 @@ a {
 .search__map {
     display: block;
     width: 1200px;
-    height: 595px;
+    min-height: 595px;
     /* margin-top: -395px; */
     background-image: url("../img/bg-map-mp.JPG");
     background-position: 50% 56%;
     background-repeat: no-repeat;
 }
 
+.search__map iframe {
+    border: 0;
+}
+
 .main-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 120px;
+    min-height: 127px;
 }
 
 .main-footer--transparent-on {
     position: relative;
     margin: 0;
-    margin-top: -123px;
+    margin-top: -127px;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 11;
@@ -730,19 +745,20 @@ a {
 
 .main-footer--transparent-off {
     background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
 }
 
 .visit {
     display: block;
     margin: 0;
-    margin-top: 46px;
+    margin-top: 45px;
     margin-left: 133px;
     margin-bottom: 48px;
     padding: 0;
 }
 
 .visit__link {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -761,7 +777,7 @@ a {
 .social {
     display: block;
     margin: 0;
-    margin-top: 36px;
+    margin-top: 35px;
     margin-left: 256px;
     padding: 0;
 }
@@ -809,7 +825,7 @@ a {
 .designed-by {
     display: flex;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 38px;
     margin-left: 221px;
     padding: 0;
 }
@@ -820,7 +836,7 @@ a {
     margin-top: 10px;
     margin-right: 8px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -831,20 +847,16 @@ a {
 .designed-by__link {
     display: block;
     width: 115px;
-    height: 41px;
+    min-height: 41px;
     margin: 0;
     padding: 0;
 }
 
 .designed-by__link:hover svg,
-.designed-by__link:focus svg,
-.designed-by__link:hover svg,
 .designed-by__link:focus svg  {
     fill: #81b3d2;
 }
 
-.designed-by__link:active svg,
-.designed-by__link:active svg,
 .designed-by__link:active svg,
 .designed-by__link:active svg  {
     fill: #bdbbbc;
@@ -866,7 +878,7 @@ a {
 .filter__form {
     display: block;
     margin: 0;
-    margin-top: 15px;
+    margin-top: 16px;
     padding: 0;
 }
 
@@ -888,19 +900,19 @@ a {
 }
 
 .filter-form__item:nth-child(2) {
-    margin-left: 117px;
+    margin-left: 118px;
 }
 
 .filter-form__item:nth-child(3) {
-    margin-left: 347px;
+    margin-left: 346px;
 }
 
 .filter-form__title {
     display: block;
     margin: 0;
-    margin-top: 26px;
+    margin-top: 27px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
@@ -960,7 +972,7 @@ a {
     width: 314px;
     height: 32px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 9px;
     padding: 0;
     border: 2px solid #ffffff;
     border-radius: 2px;
@@ -984,7 +996,7 @@ a {
     width: 157px;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1003,7 +1015,7 @@ a {
     position: relative;
     display: flex;
     margin: 0;
-    margin-top: 22px;
+    margin-top: 20px;
     padding: 0;
 }
 
@@ -1055,7 +1067,7 @@ a {
     margin-top: 25px;
     margin-left: 40px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1069,11 +1081,11 @@ a {
     width: 135px;
     margin: 0;
     margin-left: 85px;
-    margin-top: 23px;
+    margin-top: 24px;
     padding: 0;
     padding-top: 6px;
     padding-bottom: 6px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1101,11 +1113,11 @@ a {
 .sort h3 {
     display: block;
     margin: 0;
-    margin-top: 30px;
-    margin-left: 73px;
+    margin-top: 29px;
+    margin-left: 72px;
     margin-bottom: 30px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -1116,9 +1128,9 @@ a {
     display: block;
     margin: 0;
     margin-top: 35px;
-    margin-left: 47px;
+    margin-left: 48px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -1142,7 +1154,7 @@ a {
 }
 
 .sort__select a {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -1174,7 +1186,7 @@ a {
 .sort__arrows {
     display: flex;
     margin: 0;
-    margin-top: 35px;
+    margin-top: 33px;
     margin-left: auto;
     margin-right: 72px;
     padding: 0;
@@ -1220,13 +1232,14 @@ a {
     display: flex;
     margin: 0;
     padding: 0;
-    padding: 30px 0px 30px 73px;
+    padding: 30px 0px 29px 73px;
     border-top: 1px solid #e5e5e5;
 }
 
-.result:last-child {
+/* .result:last-child {
     border-bottom: 1px solid #e5e5e5;
-}
+} */
+
 
 .result__photo {
     display: block;
@@ -1247,7 +1260,7 @@ a {
     margin: 0;
     margin-top: -5px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -1284,7 +1297,7 @@ a {
     margin: 0;
     margin-top: 7px;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1294,8 +1307,9 @@ a {
 .relust-info__btns {
     display: flex;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 13px;
     padding: 0;
+    font-style: 0;
 }
 
 .result-info__btn-more {
@@ -1306,7 +1320,7 @@ a {
     padding: 0;
     padding-top: 5px;
     padding-bottom: 3px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -1336,7 +1350,7 @@ a {
     padding: 0;
     padding-top: 5px;
     padding-bottom: 3px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -1397,8 +1411,8 @@ a {
     margin: 0;
     padding: 0;
     padding-top: 3px;
-    padding-bottom: 3px;
-    font-family: "PT Sans", sans-serif;
+    padding-bottom: 4px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1406,3 +1420,102 @@ a {
     color: #8b8b8b;
     background-color: #f2f2f2;
 }
+
+/* Style for IE11 */
+
+@media screen and   (-ms-high-contrast: active),
+                    (-ms-high-contrast: none) {
+    .search-form__date-of-arrival--icon-calendar svg,
+    .search-form__date-of-departure--icon-calendar svg {
+        display: none;
+    }
+
+    .search-form__date-of-arrival--icon-calendar,
+    .search-form__date-of-departure--icon-calendar {
+        display: block;
+        width: 21px;
+        height: 22px;
+        margin: 0;
+        padding: 0;
+        background-image: url("../img/calendar-gray.svg");
+    }
+
+    .search-form__date-of-arrival--icon-calendar:hover,
+    .search-form__date-of-arrival--icon-calendar:active,
+    .search-form__date-of-departure--icon-calendar:hover,
+    .search-form__date-of-departure--icon-calendar:active {
+        background-image: url("../img/calendar.svg");
+    }
+
+    .search-form__date-of-arrival--icon-calendar:focus,
+    .search-form__date-of-departure--icon-calendar:focus {
+        background-image: url("../img/calendar-blue.svg");
+    }
+
+    .search-form__amount-of-adults--less {
+        top: 180px;
+        left: 170px;
+    }
+    
+    .search-form__amount-of-adults--more {
+        top: 182px;
+        left: 245px;
+    }
+    
+    .search-form__amount-of-children--less {
+        top: 180px;
+        left: 400px;
+    }
+    
+    .search-form__amount-of-children--more {
+        top: 182px;
+        left: 476px;
+    }
+    
+    .designed-by__link {
+        display: block;
+        width: 115px;
+        min-height: 41px;
+        margin: 0;
+        padding: 0;
+        background-image: url("../img/html-academy-icon-black.svg");
+    }
+
+    .designed-by__link svg {
+        display: none;
+    }
+    
+    .designed-by__link:hover,
+    .designed-by__link:focus  {
+        background-image: url("../img/html-academy-icon-blue.svg");
+    }
+    
+    .designed-by__link:active,
+    .designed-by__link:active  {
+        background-image: url("../img/html-academy-icon-gray.svg");
+    }
+
+    .filter-form__toggles::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        content: "";
+        z-index: 1;
+        display: block;
+        width: 255px;
+        height: 2px;
+        background-color: #ffffff;
+        opacity: 1;
+    }
+
+    .result-rank__number-of-stars {
+        display: inline-block;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        height: 20px;
+        vertical-align: middle;
+        background-image: url("../img/star.svg");
+        background-repeat: space;
+    }
+}  
