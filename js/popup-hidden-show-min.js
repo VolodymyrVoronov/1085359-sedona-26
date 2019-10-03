@@ -1,0 +1,1 @@
+var link=document.querySelector(".search__btn"),popup=document.querySelector(".search__form"),close=popup.querySelector(".search-form--visible");link.addEventListener("click",function(e){e.preventDefault(),popup.classList.toggle("search-form--visible")});
