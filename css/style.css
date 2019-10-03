@@ -534,6 +534,40 @@ a {
     display: none;
 }
 
+.search-form--error {
+    -webkit-animation: popup-error 0.6s;
+            animation: popup-error 0.6s;
+}
+
+@-webkit-keyframes popup-error {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-15px);
+                transform: translateX(-15px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(15px);
+                transform: translateX(15px);
+    }
+}
+@keyframes popup-error {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-15px);
+                transform: translateX(-15px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(15px);
+                transform: translateX(15px);
+    }
+}
+
 .search-form__date-of-arrival,
 .search-form__date-of-departure,
 .search-form__amount-of-adults,
