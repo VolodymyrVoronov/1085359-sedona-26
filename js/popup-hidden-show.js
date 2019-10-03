@@ -10,14 +10,14 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-    storage = localStorage.getItem("amountOfAdults", "amountOfChildren");
+    storage = localStorage.getItem("amountOfAdults");
     } catch (err) {
     isStorageSupport = false;
 }
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
-    form.classList.toggle("search-form--visible");
+    form.classList.toggle("search-form--invisible");
     if (storage) {
         amountOfAdults.value = storage;
         amountOfChildren.focus();
@@ -35,7 +35,6 @@ form.addEventListener("submit", function (evt) {
     } else {
         if (isStorageSupport) {
             localStorage.setItem("amountOfAdults", amountOfAdults.value);
-            localStorage.setItem("amountOfChildren", amountOfAdults.value);
         }
     }
 });

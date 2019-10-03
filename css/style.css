@@ -530,7 +530,7 @@ a {
     }
 }
 
-.search-form--visible {
+.search-form--invisible {
     display: none;
 }
 
