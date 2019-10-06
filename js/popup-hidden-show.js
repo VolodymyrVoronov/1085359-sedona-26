@@ -14,11 +14,9 @@ storage.amountOfChildren = localStorage.getItem("amount-of-children");
 
 if (storage.amountOfAdults) {
     amountOfAdults.value = storage.amountOfAdults;
-    amountOfChildren.focus();
 } 
 if (storage.amountOfChildren) {
     amountOfChildren.value = storage.amountOfChildren;
-    send.focus();
 }
 
 link.addEventListener("click", function (evt) {
