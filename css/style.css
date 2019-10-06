@@ -1091,8 +1091,25 @@ a {
     opacity: 0.5;
 }
 
-.filter-form__option label:focus {
-    outline: 3px solid #000000;
+.filter-form__option label {
+    position: relative;
+    outline: none;
+}
+
+.filter-form__option label::after {
+    position: absolute;
+    content: "";
+    display: none;
+    top: -6px;
+    left: -44px;
+    width: 26px;
+    height: 26px;
+    border: 3px solid #5496bd;
+    border-radius: 5px;
+}
+
+.filter-form__option label:focus::after {
+    display: block;
 }
 
 .filter-form__prices {
