@@ -22,6 +22,7 @@ if (storage.amountOfChildren) {
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     form.classList.remove("search-form--error");
+    form.classList.toggle("search-form--visible");
     form.classList.toggle("search-form--invisible");
 });
 

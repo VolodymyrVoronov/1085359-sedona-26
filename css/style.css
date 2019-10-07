@@ -71,14 +71,14 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active) {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+	position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    width: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    border: 0; 
 }
 
 .container {
@@ -88,7 +88,7 @@ a {
     margin: 0 auto;
     -webkit-box-shadow: 0 0 20px #d4d4d4;
             box-shadow: 0 0 20px #d4d4d4;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .btn {
@@ -169,7 +169,7 @@ a {
     line-height: 26px;
     font-weight: 700;
     vertical-align: middle;
-    color: #000;
+    color: #000000;
     text-transform: uppercase;
 }
 
@@ -218,12 +218,21 @@ a {
     margin-top: 15px;
     padding: 0;
     background-color: #a0bbcf;
-    background-image: url("../img/welcome.svg"),
-                      url("../img/bg-mp.jpg");
-    background-size: 459px 353px, cover;
-    background-position: center 75px, center -83px;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url("../img/bg-mp.jpg");
+    background-size: cover;
+    background-position: center -83px;
+    background-repeat: no-repeat;
     z-index: 1;
+}
+
+.content__img img {
+    display: block;
+    width: 459px;
+    height: 353px;
+    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 76px;
 }
 
 .content__img::before {
@@ -255,6 +264,8 @@ a {
     display: block;
     margin: 0;
     margin-top: 58px;
+    margin-left: 350px;
+    margin-right: 350px;
     padding: 0;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
@@ -333,6 +344,8 @@ a {
 }
 
 .features-item__title--color-white {
+    margin-left: 125px;
+    margin-right: 125px;
     color: #ffffff;
 }
 
@@ -373,17 +386,26 @@ a {
     margin: 0;
     margin-top: 22px;
     margin-bottom: 52px;
+    margin-left: 47px;
+    margin-right: 47px;
     padding: 0;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;  
     font-weight: 400;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
     text-align: center;
 }
 
 .features-item__text--color-white {
+    margin-left: 40px;
+    margin-right: 40px;
     color: #ffffff;
+}
+
+.features-item__text--block-blue-space {
+    margin-left: 57px;
+    margin-right: 57px;
 }
 
 .features-item__text--color-black {
@@ -392,11 +414,21 @@ a {
     color: #000000;
 }
 
+.features__item--bg-color-gray .features-item__title--color-black {
+    margin-left: 125px;
+    margin-right: 125px;
+}
 
 .features__item--bg-color-gray .features-item__text--color-black {
     margin-bottom: 58px;
+    margin-left: 65px;
+    margin-right: 65px;
 }
 
+.features__item--bg-color-gray .features-item__text--block-gray-space {
+    margin-left: 74px;
+    margin-right: 74px;
+}
 
 .features-item__icon {
     display: block;
@@ -534,6 +566,10 @@ a {
     display: none;
 }
 
+.search-form--visible {
+    display: block;
+}
+
 .search-form--error {
     -webkit-animation: popup-error 0.6s;
             animation: popup-error 0.6s;
@@ -623,6 +659,7 @@ a {
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
+    vertical-align: middle;
     color: #000000;
     border: none;
     background-color: #f2f2f2;
@@ -662,6 +699,7 @@ a {
     width: 39px;
     padding: 8px 38px 8px 38px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .search-form__amount-of-adults input[type="text"] {
@@ -819,9 +857,9 @@ a {
     display: block;
     width: 1200px;
     min-height: 585px;
-    /* margin-top: -395px; */
     margin: 0;
     padding: 0;
+    background-color: #d8e4c1;
     background-image: url("../img/bg-map-mp.JPG");
     background-position: 50% 56%;
     background-repeat: no-repeat;
@@ -859,11 +897,15 @@ a {
 }
 
 .visit {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 400px;
     margin: 0;
     margin-top: 45px;
-    margin-left: 133px;
-    margin-bottom: 48px;
     padding: 0;
 }
 
@@ -885,10 +927,15 @@ a {
 }
 
 .social {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 400px;
     margin: 0;
     margin-top: 35px;
-    margin-left: 256px;
     padding: 0;
 }
 
@@ -897,6 +944,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin: 0;
+    margin-left: 4px;
     padding: 0;
     list-style: none;
     text-decoration: none;
@@ -943,9 +991,12 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 400px;
     margin: 0;
     margin-top: 38px;
-    margin-left: 221px;
     padding: 0;
 }
 
@@ -981,14 +1032,13 @@ a {
     fill: #bdbbbc;
 }
 
-
-
 /* catalog */
 
 .filter {
     display: block;
     width: 1200px;
     min-height: 217px;
+    background-color: #6d8ba6;
     background-image: url("../img/bg-filter-cp.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -1224,9 +1274,8 @@ a {
 }
 
 .filter-form__toggle:hover {
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(255,255,255,1);
-            box-shadow: 0px 2px 5px 0px rgba(255,255,255,1);
-
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .filter-form__toggle--right {
@@ -1614,6 +1663,16 @@ a {
 
 @media screen and   (-ms-high-contrast: active),
                     (-ms-high-contrast: none) {
+    .features-item__title--color-white {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    .features__item--bg-color-gray .features-item__text--block-gray-space {
+        margin-left: 55px;
+        margin-right: 55px;
+    }
+    
     .search-form__date-of-arrival--icon-calendar svg,
     .search-form__date-of-departure--icon-calendar svg {
         display: none;
