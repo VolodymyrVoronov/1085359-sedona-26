@@ -903,6 +903,8 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 400px;
     margin: 0;
     margin-top: 45px;
@@ -933,6 +935,8 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 400px;
     margin: 0;
     margin-top: 35px;
@@ -969,6 +973,8 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 46px;
     height: 48px;
     background-color: #81b3d2;
@@ -994,6 +1000,8 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;        
     width: 400px;
     margin: 0;
     margin-top: 38px;
@@ -1267,13 +1275,15 @@ a {
     background-color: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(255,255,255,1);
-            box-shadow: 0px 2px 3px 0px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 1px 1px rgba(82,88,86,1);
+            box-shadow: 0px 2px 1px 1px rgba(82,88,86,1);
     cursor: pointer;
     opacity: 1;
 }
 
 .filter-form__toggle:hover {
+    -webkit-box-shadow: 0px 2px 1px 1px rgba(107,111,110,1);
+            box-shadow: 0px 2px 1px 1px rgba(107,111,110,1);
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
 }

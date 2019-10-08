@@ -19,6 +19,8 @@ if (storage.amountOfChildren) {
     amountOfChildren.value = storage.amountOfChildren;
 }
 
+form.classList.add("search-form--invisible");
+
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     form.classList.remove("search-form--error");
