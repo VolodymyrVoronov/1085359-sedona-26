@@ -1131,23 +1131,19 @@ a {
 	opacity: 1;
 }
 
-.filter-form__option input[type="checkbox"]:disabled + label:before {
-    background: url("../img/checkbox-off.svg");
-    opacity: 0.5;
-}
-
-.filter-form__option input[type="checkbox"]:disabled {
-    opacity: 0.5;
-}
-
 .filter-form__option input[type="checkbox"]:checked + label:before {
     background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-.filter-form__option input[type="checkbox"]:disabled + label:before {
-    background: url("../img/checkbox-on.svg") no-repeat;
-    opacity: 0.5;
+.filter-form__option input[type="checkbox"]:checked:disabled + label:before {
+    background: url("../img/checkbox-on-disabled.svg") no-repeat;
 }
+
+.filter-form__option input[type="checkbox"]:disabled + label:before {
+    background: url("../img/checkbox-off-disabled.svg") no-repeat;
+}
+
+
 
 .filter-form__option label {
     position: relative;
