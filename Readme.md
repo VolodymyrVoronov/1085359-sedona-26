@@ -1,4 +1,4 @@
-# Личный проект «Седона»
+# Личный проект «Седона» 
 
 * Студент: [Volodymyr Voronov](https://up.htmlacademy.ru/htmlcss/26/user/1085359).
 * Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
